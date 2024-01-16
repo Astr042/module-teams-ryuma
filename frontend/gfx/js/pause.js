@@ -107,7 +107,7 @@ function displayBestOF(match) {
   const blueTag = document.createElement('h2')
   blueTag.classList.add('tag')
   blueTag.classList.add('blue')
-  if (parseInt(redTeam.score) >= Math.ceil(parseInt(match.bestOf) / 2)) {
+  if (parseInt(redTeam.score) >= getBestOfCount(match.bestOf)) {
     blueTag.classList.add('outline')
     matchDiv.classList.add('redWins')
   }
@@ -120,7 +120,7 @@ function displayBestOF(match) {
 
   const blueShards = displayShards(parseInt(blueTeam.score), match.bestOf)
   blueShards.classList.add('blue')
-  if (parseInt(redTeam.score) >= Math.ceil(parseInt(match.bestOf) / 2)) {
+  if (parseInt(redTeam.score) >= getBestOfCount(match.bestOf)) {
     blueShards.classList.add('outline')
   }
   blueTeamDiv.appendChild(blueTag)
@@ -134,7 +134,7 @@ function displayBestOF(match) {
   const redTag = document.createElement('h2')
   redTag.classList.add('tag')
   redTag.classList.add('red')
-  if (parseInt(blueTeam.score) >= Math.ceil(parseInt(match.bestOf) / 2)) {
+  if (parseInt(blueTeam.score) >= getBestOfCount(match.bestOf)) {
     redTag.classList.add('outline')
     matchDiv.classList.add('blueWins')
   }
@@ -147,7 +147,7 @@ function displayBestOF(match) {
 
   const redShards = displayShards(parseInt(redTeam.score), match.bestOf)
   redShards.classList.add('red')
-  if (parseInt(blueTeam.score) >= Math.ceil(parseInt(match.bestOf) / 2)) {
+  if (parseInt(blueTeam.score) >= getBestOfCount(match.bestOf)) {
     redShards.classList.add('outline')
   }
   redTeamDiv.appendChild(redTag)
@@ -173,7 +173,7 @@ function displayShards(points, bestOf = 3) {
   const shardsDiv = document.createElement('div')
   shardsDiv.classList.add('shards')
 
-  for (const i of Array(Math.ceil(bestOf / 2))) {
+  for (const i of Array(getBestOfCount(bestOf))) {
     const shard = document.createElement('div')
     shard.classList.add('shard')
     if (points > 0) {
@@ -201,4 +201,11 @@ const resizeText = (parent) => {
 
   // revert to last state where no overflow happened:
   parent.style.fontSize = `${i - 1}px`
+}
+
+function getBestOfCount(bestOf){
+  if (parseInt(bestOf) === 2) {
+    return 2
+  }
+  return Math.ceil(parseInt(bestOf) / 2)
 }

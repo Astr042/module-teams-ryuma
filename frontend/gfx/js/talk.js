@@ -86,21 +86,21 @@ function displayTeams(teams, bestOf) {
     pointContainer.style.display = 'flex'
     displayPoints(bestOf, teams.blueTeam, teams.redTeam)
     if (teams.blueTeam.score >= Math.ceil(bestOf / 2)) {
-      redTag.classList.add('outline')
-      redName.classList.add('outline')
+      // redTag.classList.add('outline')
+      // redName.classList.add('outline')
     } else if (teams.redTeam.score >= Math.ceil(bestOf / 2)) {
-      blueTag.classList.add('outline')
-      blueName.classList.add('outline')
+      // blueTag.classList.add('outline')
+      // blueName.classList.add('outline')
     }
   } else {
     document.body.classList.remove('has-scores')
     pointContainer.style.display = 'none'
     if (teams.blueTeam.score > teams.redTeam.score) {
-      redTag.classList.add('outline')
-      redName.classList.add('outline')
+      // redTag.classList.add('outline')
+      // redName.classList.add('outline')
     } else if (teams.redTeam.score > teams.blueTeam.score) {
-      blueTag.classList.add('outline')
-      blueName.classList.add('outline')
+      // blueTag.classList.add('outline')
+      // blueName.classList.add('outline')
     }
   }
 }

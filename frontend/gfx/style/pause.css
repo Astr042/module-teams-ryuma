@@ -4,33 +4,40 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: RYUMA;
+  src: url('../Morganite-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
 .module-teams-pause-gfx {
   width: 1920px;
   height: 1080px;
   overflow: hidden;
-  font-family: var(--secondary-font-family);
+  font-family: RYUMA !important;
   font-weight: 700;
   font-style: normal;
   color: var(--text-color);
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
-  font-size: 115px;
+  font-size: 150px;
 }
 h2 {
-  font-size: 75px;
+  font-size: 130px !important;
+  margin-bottom: -20px;
+  letter-spacing: 10px;
 }
 
 #container {
   position: absolute;
-  right: 100px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 41%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
 }
 
 .match {
@@ -56,12 +63,11 @@ h2 {
 }
 
 .vs {
-  font-family: var(--primary-font-family);
-  color: var(--accent-color);
+  color: transparent;
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
-  margin: 0 50px;
+  margin: 0 275px;
   line-height: 1;
 }
 
@@ -73,7 +79,11 @@ h2 {
 }
 
 .tag.blue {
-  text-align: right;
+  text-align: center;
+}
+
+.tag.red {
+  text-align: center;
 }
 
 .tag.outline {
@@ -98,8 +108,8 @@ h2 {
   flex-grow: 1;
   display: inline-block;
   border-radius: 5px;
-  border: 3px solid var(--background-color);
-  opacity: 0.25;
+  border: 6px solid white;
+  opacity: 0.3;
 }
 
 .shards.blue .shard.full {
