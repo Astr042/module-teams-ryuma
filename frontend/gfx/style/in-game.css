@@ -10,7 +10,7 @@
   overflow: hidden;
   position: relative;
   font-family: var(--secondary-font-family);
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-color);
   font-size: 50px;
 }

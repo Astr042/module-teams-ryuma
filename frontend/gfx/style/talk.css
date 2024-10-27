@@ -6,8 +6,13 @@
 
 @font-face {
   font-family: RYUMA;
-  src: url('../Morganite-Bold.ttf') format('truetype');
-  font-weight: 700;
+  src: url("../GothamMedium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: RYUMA;
+  src: url("../GothamBold.ttf") format("truetype");
+  font-weight: 600;
 }
 
 .module-teams-talk-gfx {
@@ -15,7 +20,7 @@
   height: 1080px;
   overflow: hidden;
   font-family: RYUMA !important;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
   color: var(--text-color);
   font-size: 50px;
@@ -34,11 +39,13 @@
 }
 
 .blue {
-  color: var(--blue-team);
+  /* color: var(--blue-team); */
+  font-weight: 600;
 }
 
 .red {
-  color: var(--red-team);
+  /* color: var(--red-team); */
+  font-weight: 600;
 }
 
 .team {
@@ -59,18 +66,20 @@
 .vs {
   padding: 0 50px;
   color: var(--accent-color);
-  font-weight: bold;
-  font-size: 50px;
+  font-family: RYUMA;
+  font-weight: 600;
+  font-size: 100px;
   margin: 0 35px;
-  margin-top: 50px;
+  margin-top: 15px;
 }
 
 .tag,
 .score {
+  font-family: RYUMA;
+  font-weight: 600;
   font-size: 150px;
   text-transform: uppercase;
   line-height: 1;
-  font-family: RYUMA;
 }
 
 .score {
@@ -94,7 +103,7 @@
 .name {
   line-height: 1;
   text-transform: uppercase;
-  font-size: 55px !important;
+  font-size: 45px !important;
   width: 450px;
   white-space: nowrap;
   overflow: hidden;

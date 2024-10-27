@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: RYUMA;
-  src: url('../Morganite-Bold.ttf') format('truetype');
-  font-weight: 700;
+  src: url("../GothamMedium.ttf") format("truetype");
+  font-weight: 500;
 }
 
 .module-teams-pause-gfx {
@@ -15,7 +15,7 @@
   height: 1080px;
   overflow: hidden;
   font-family: RYUMA !important;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
   color: var(--text-color);
   position: relative;
